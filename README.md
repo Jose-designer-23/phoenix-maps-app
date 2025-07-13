@@ -1,68 +1,127 @@
-# MapsApp
+# 🗺️ Phoenix Maps App 🚀
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.11.
+¡Bienvenido a la aplicación **Phoenix Maps App**! Este proyecto es una potente y visualmente atractiva herramienta desarrollada con Angular y **Mapbox GL JS** que te permite interactuar con un globo terráqueo dinámico, añadir marcadores personalizados y explorar ubicaciones específicas con detalles geográficos.
 
-## Development server
+Esta aplicación demuestra habilidades avanzadas en el desarrollo frontend, incluyendo el consumo de APIs de mapas, la manipulación de datos geoespaciales, la gestión de eventos de usuario en un entorno 3D, y la creación de interfaces de usuario interactivas.
 
-To start a local development server, run:
+## ✨ Características Principales
 
-```bash
-ng serve
-```
+La aplicación se organiza en un menú de hamburguesa con tres categorías principales, cada una ofreciendo una experiencia única de interacción con el mapa:
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+### 1. 🌍 Explorar el Globo Terráqueo
 
-## Code scaffolding
+Esta sección te permite una inmersión completa en el mundo con funcionalidades de navegación avanzadas:
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+* **Niveles de Zoom (1-19):** Experimenta un rango de zoom de 19 niveles, desde una vista completa del planeta en el espacio hasta las calles más detalladas de las ciudades.
+* **Control de Zoom Versátil:**
+    * **Zoom Táctil:** Interacción intuitiva para hacer zoom con gestos táctiles (o con la rueda del ratón).
+    * **Panel de Zoom con Rango:** Un input de tipo `range` en la parte inferior derecha permite un control preciso del zoom (niveles 1-19).
+    * **Botones de Zoom Rápido:** Botones de aumento (`+`) y disminución (`-`) del zoom, junto con la brújula, ubicados en la **parte superior derecha** de la interfaz.
+* **Coordenadas en Tiempo Real:** Un display en formato JSON en la parte inferior derecha muestra la latitud y longitud exactas del centro del mapa en tiempo real.
+* **Brújula y Re-centrado:** Un botón de brújula en la **parte superior derecha** que, al pulsarlo, centra la vista del mapa hacia el norte.
+* **Modo de Exploración Pura:** Un botón dedicado para poner el globo terráqueo en pantalla completa, ocultando la interfaz para una experiencia de exploración puramente táctil e inmersiva.
 
-```bash
-ng generate component component-name
-```
+### 2. 📍 Marcadores Personalizados
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+En esta categoría, puedes interactuar directamente con el mapa añadiendo y gestionando marcadores:
 
-```bash
-ng generate --help
-```
+* **Colocación de Marcadores:** Mientras exploras el mundo, puedes colocar marcadores en cualquier ubicación deseada en el mapa.
+* **Marcadores con Información Detallada:** Cada marcador:
+    * Tiene un **color diferente que se genera aleatoriamente**.
+    * Indica el **nombre exacto del lugar** donde fue colocado.
+    * Cuando se pulsa sobre un marcador en el mapa, aparece un recuadro interactivo que muestra:
+        * Nombre de la calle
+        * Código postal
+        * Localidad/Comunidad Autónoma
+        * País
+* **Lista de Marcadores:** Los marcadores colocados se listan en una pequeña caja en la **parte superior izquierda** de la interfaz.
+* **Navegación Rápida:** Al hacer clic en un marcador de la lista (en la cajita), el mapa te llevará directamente a esa ubicación, y el marcador correspondiente en el mapa mostrará su recuadro de información.
+* **Eliminación de Marcadores:** Pulsando **dos veces** sobre un marcador en el mapa, este será eliminado.
 
-## Building
+### 3. 🏡 Simulación de Ventas de Inmuebles
 
-To build the project run:
+Esta sección simula una aplicación de bienes raíces, mostrando propiedades en el mapa:
 
-```bash
-ng build
-```
+* **Ubicación de Inmuebles:** Muestra la ubicación geográfica precisa de varios inmuebles en el mapa.
+* **Visualización de Detalles:** Se presenta una interfaz con el nombre de la casa, una breve descripción y **tres etiquetas (`badges`)** con información clave de la propiedad (ej., tipo, características, etc.).
+* **Solo Visual:** Es importante destacar que esta sección es una **simulación puramente visual** de inmuebles y sus ubicaciones en el mapa.
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## 🛠️ Tecnologías Utilizadas
 
-## Running unit tests
+### Frontend:
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+* [**Angular**](https://angular.io/) - Framework robusto para la construcción de la interfaz de usuario.
+* [**Mapbox GL JS**](https://docs.mapbox.com/mapbox-gl-js/api/) - Biblioteca de JavaScript para mapas interactivos y personalizados basados en vectores.
+* [**RxJS**](https://rxjs.dev/) - Para la gestión de flujos de datos asíncronos y la manipulación de eventos del mapa.
+* **API de Mapbox:** Consumo de la API de Mapbox para geocodificación inversa, geolocalización y datos de mapas.
 
-```bash
-ng test
-```
+---
 
-## Running end-to-end tests
+## 🚀 Cómo Ejecutar el Proyecto
 
-For end-to-end (e2e) testing, run:
+Para poner en marcha la aplicación **Phoenix Maps App** en tu entorno local, sigue estos pasos:
 
-```bash
-ng e2e
-```
+### Requisitos Previos
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+* Node.js (versión 18 o superior)
+* npm o Yarn
+* **Clave de API de Mapbox:** Necesitarás una clave de acceso pública de Mapbox. Regístrate en [Mapbox](https://www.mapbox.com/) para obtenerla.
 
-## Additional Resources
+### Pasos
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+1.  **Clonar el repositorio:**
+    ```bash
+    git clone [https://github.com/Jose-designer-23/phoenix-maps-app.git](https://github.com/Jose-designer-23/phoenix-maps-app.git)
+    cd phoenix-maps-app
+    ```
 
+2.  **Configurar la clave de API de Mapbox:**
+    * Dentro de la carpeta `src/environments/` (o donde tengas tus variables de entorno), abre el archivo `environment.ts` (y/o `environment.prod.ts` si la tienes).
+    * Añade tu clave de API de Mapbox obtenida en los requisitos previos. Por ejemplo:
+        ```typescript
+        export const environment = {
+          production: false,
+          mapbox_key: 'TU_CLAVE_DE_API_MAPBOX_AQUI' // <--- Inserta tu clave aquí
+        };
+        ```
+        (El nombre de la variable `mapbox_key` puede variar según cómo la hayas implementado en tu código).
 
-#MapsApp
-Levantar proyecto en Dev
+3.  **Instalar dependencias:**
+    ```bash
+    npm install
+    # o si usas Yarn
+    # yarn install
+    ```
 
-1. Clonar repositorio
-2. Instalar dependencias
-3. Generar el `.env` basado en el `.env.template`
-4. Ejecutar el comando `npm run set-envs`
+4.  **Iniciar la aplicación:**
+    ```bash
+    ng serve
+    ```
+
+5.  **Acceder a la Aplicación:**
+    Abre tu navegador y ve a `http://localhost:4200/`. La aplicación se recargará automáticamente cada vez que modifiques los archivos fuente.
+
+---
+
+## 💻 Comandos de Desarrollo (Angular CLI)
+
+Esta sección proporciona una referencia rápida a los comandos más comunes de Angular CLI.
+
+* **Arrancar el Servidor de Desarrollo:**
+    ```bash
+    ng serve
+    ```
+* **Generar Componentes, Servicios, etc.:**
+    ```bash
+    ng generate component nombre-del-componente
+    ng generate service services/mi-servicio
+    # Para ver una lista completa de esquemas: ng generate --help
+    ```
+* **Construir el Proyecto para Producción:**
+    ```bash
+    ng build
+    ```
+* **Ejecutar Pruebas Unitarias:**
+    ```bash
+    ng test
+    ```
