@@ -1,0 +1,35 @@
+<div class="relative w-screen h-screen overflow-hidden">
+  <div #map id="map" class="absolute inset-0 z-0"></div>
+
+  <section
+      class="absolute z-10 top-[80px] left-4 w-[350px] min-h-[150px] max-h-[50vh] bg-white rounded-xl p-6 shadow-lg overflow-y-auto
+            sm:top-[80px] sm:left-4 sm:w-[350px] max-sm:top-auto max-sm:bottom-0 max-sm:left-0 max-sm:w-full max-sm:rounded-t-xl
+            max-sm:rounded-b-none max-sm:p-3 max-sm:max-h-[32vh]">
+      <h2 class="text-xl font-bold text-black mb-2">Marcadores</h2>
+      <div class="flex flex-col gap-2">
+      @for (marker of markers(); track marker.id) {
+        <div
+          class="form-control"
+          (click)="flyToMarker(marker.mapboxMarker.getLngLat(), marker)"
+          (dblclick)="deleteMarker(marker)"
+        >
+          <label class="label cursor-pointer">
+            <span class="label-text text-black text-js">
+              {{ marker.address }}
+            </span>
+            <input
+              type="radio"
+              name="radio-10"
+              class="radio"
+              [style]="{backgroundColor: marker.mapboxMarker._color}"
+              checked="checked" />
+          </label>
+        </div>
+      } @empty {
+        <div class="flex justify-center items-center bg-blue-100 rounded py-5">
+          <p class="text-xs text-secondary">No hay marcadores</p>
+        </div>
+      }
+    </div>
+  </section>
+</div>

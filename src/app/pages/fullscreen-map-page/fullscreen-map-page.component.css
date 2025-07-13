@@ -1,0 +1,30 @@
+:host, html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+#map {
+  position: absolute;
+  top: 64px; /* Ajusta a la altura real de tu navbar */
+  left: 0;
+  width: 100vw;
+  height: calc(100vh - 64px); /* El resto de la pantalla menos el navbar */
+  min-height: unset;
+  min-width: unset;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+}
+#controls {
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+  position: fixed;
+  bottom:25px;
+  right: 20px;
+  z-index: 9999;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  border: 1px solid #e2e8f0;
+  width: 250px;
+}
