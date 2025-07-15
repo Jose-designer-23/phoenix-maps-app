@@ -50,9 +50,12 @@ Esta sección simula una aplicación de bienes raíces, mostrando propiedades en
 
 ### Frontend:
 
-* [**Angular**](https://angular.io/) - Framework robusto para la construcción de la interfaz de usuario.
+* **[Angular](https://angular.io/) (v19.2.14, con Signals):** El framework principal para construir la interfaz de usuario, aprovechando sus potentes pipes integrados y personalizados, junto con la gestión de estado reactivo mediante Signals.
+* **[TypeScript](https://www.typescriptlang.org/) (~5.7.2):** El lenguaje de programación base que añade tipado estático.
+* **[Tailwind CSS](https://tailwindcss.com/) (v3.4.17):** Un framework CSS de utilidad para un diseño rápido y responsivo.
+* **[DaisyUI](https://daisyui.com/) (v4.12.24):** Una biblioteca de componentes UI para Tailwind CSS.
+* **[RxJS](https://rxjs.dev/) (~7.8.0):** Para la gestión de flujos de datos asíncronos y programación reactiva dentro de Angular.
 * [**Mapbox GL JS**](https://docs.mapbox.com/mapbox-gl-js/api/) - Biblioteca de JavaScript para mapas interactivos y personalizados basados en vectores.
-* [**RxJS**](https://rxjs.dev/) - Para la gestión de flujos de datos asíncronos y la manipulación de eventos del mapa.
 * **API de Mapbox:** Consumo de la API de Mapbox para geocodificación inversa, geolocalización y datos de mapas.
 
 ---
