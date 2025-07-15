@@ -50,9 +50,12 @@ This section simulates a real estate application, displaying properties on the m
 
 ### Frontend:
 
-* [**Angular**](https://angular.io/) - Robust framework for building the user interface.
+* **[Angular](https://angular.io/) (v19.2.14, with Signals):** The core framework for building user interfaces, leveraging powerful built-in and custom pipes and reactive state management via Signals.
+* **[TypeScript](https://www.typescriptlang.org/) (~5.7.2):** The base programming language that adds static typing.
+* **[Tailwind CSS](https://tailwindcss.com/) (v3.4.17):** A utility CSS framework for fast, responsive design.
+* **[DaisyUI](https://daisyui.com/) (v4.12.24):** A UI component library for Tailwind CSS.
+* **[RxJS](https://rxjs.dev/) (~7.8.0):** For managing asynchronous data streams and reactive programming within Angular.
 * [**Mapbox GL JS**](https://docs.mapbox.com/mapbox-gl-js/api/) - JavaScript library for interactive and customizable vector maps.
-* [**RxJS**](https://rxjs.dev/) - For managing asynchronous data streams and map event manipulation.
 * **Mapbox API:** Consumption of the Mapbox API for reverse geocoding, geolocation, and map data.
 
 ---
